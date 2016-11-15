@@ -48,15 +48,19 @@ var SearchComponent=React.createClass({
       return(<option value={option}>{option}</option>);
     });
     return (
-      <div>
+      <div className="container">
       <h1>Search Your News</h1>
-      <select id='myList' onChange={this.dropChangeHandler} >
-      <option value="Select">Select</option>
+      <select className="selectpicker" data-style="btn-primary" id='myList' onChange={this.dropChangeHandler}>
+      <option value="Select">List All</option>
       {SelectListArr}
       </select>
       <br/>
-      < input type="text"   size="50"  placeholder="Search a News..."  onChange={this.changeHandler} />  &nbsp; &nbsp;
-      <button onClick={this.submitHandler} className="btn btn-large btn-Warning "> Submit </button>
+      <br/>
+      <div className="input-group input-group-lg">
+          <input type="text" ref='userName' placeholder="Search a News by Keyword..."  onChange={this.changeHandler} className="form-control"></input>
+          <span className="input-group-addon"><button onClick={this.submitHandler} className="btn btn-xs btn-Warning "> Submit </button></span>
+      </div>  &nbsp; &nbsp;
+      <hr/>
       </div>
     );
   }

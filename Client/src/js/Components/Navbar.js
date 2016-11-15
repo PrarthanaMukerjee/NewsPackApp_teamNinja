@@ -6,13 +6,18 @@ var Navbar = React.createClass({
   render: function() {
     return (
       <nav className="navbar navbar-default">
+      <button type="button" className="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse">
+        <span className="icon-bar"></span>
+        <span className="icon-bar"></span>
+        <span className="icon-bar"></span>
+      </button>
       <div style={{backgroundColor:"#009595"}} className="container-fluid">
       <div style={{color:'#ffffff'}} className="navbar-header">
-      <a className="navbar-brand" href="http://localhost:8080"><img alt="Brand" src="../css/d.png"></img></a>
+      <a className="navbar-brand" href="http://localhost:8080"><img alt="Brand" src="../css/d1.png"></img></a>
       </div>
       <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul className="nav navbar-nav navbar-right">
-      <li><Link style={{fontSize: 20,color:'#ffffff'}} to="/ListFav">ListFavouriteComponent <span className="glyphicon glyphicon-pencil"></span></Link></li>
+      <li><Link style={{fontSize: 20,color:'#ffffff'}} to="/ListFav">List Saved News <span className="glyphicon glyphicon-pencil"></span></Link></li>
       <li><Link style={{fontSize: 20,color:'#ffffff'}} to="/signup">SIGN UP <span className="glyphicon glyphicon-pencil"></span></Link></li>
       <li><Link style={{fontSize: 20,color:'#ffffff'}} to="/login">LOGIN <span className="glyphicon glyphicon-log-in"></span></Link></li>
       <li><Link style={{fontSize: 20,color:'#ffffff'}} to="/logout">LOGOUT <span className="glyphicon glyphicon-log-out"></span></Link></li>
